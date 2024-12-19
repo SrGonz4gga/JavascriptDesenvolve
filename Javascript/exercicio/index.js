@@ -1,22 +1,7 @@
-const soma = (a,b) => {
-    return a+b;
-}
-
-
-const subtrai = (a,b) => {
-    return a-b;
-};
-
-
-const multiplica = (a,b) => {
-    return a*b;
-};
-
-
-function divide(a,b){
-    return a/b;
-};
-
+const soma = (a,b) => a+b;
+const subtrai = (a,b) => a-b;
+const multiplica = (a,b) => a*b;
+const divide = (a,b) =>  a/b;
 
 function mostraResultado(a, b){
     console.log(`Soma entre ${a} e ${b}:`, soma(a,b));
