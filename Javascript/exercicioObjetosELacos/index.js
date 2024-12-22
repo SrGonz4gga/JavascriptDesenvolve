@@ -21,7 +21,7 @@ function adicionarLivro (titulo, autor, quantidade){
 function removerLivro(titulo, quantidadeARemover){
     const indice = livrosEmEstoque.findIndex(livro => livro.titulo == titulo);
     if(indice === -1){
-        console.log('Livro não encontrado');
+        console.log(`Livro '${titulo}' não encontrado`);
     }
     else{
         const quantidadeDoLivroEmEstoque = livrosEmEstoque[indice].quantidade;
@@ -66,4 +66,5 @@ function listarLivros (array){
         console.log('----------------------------------');
     }
 }
+
 
