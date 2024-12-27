@@ -5,13 +5,13 @@ function defineDataFinal(ano, mês, dia, hora, minuto, segundo){
 
 function exibeDataAtual(){
     const dataAtual = new Date();
-    console.log(`\n       Data Atual: ${dataAtual.getDate()}/${dataAtual.getMonth()}/${dataAtual.getFullYear()} | ${dataAtual.getHours()}:${dataAtual.getMinutes()}:${dataAtual.getSeconds()}`);
+    document.getElementById('Regressiva').innerText = `\nContagem Regressiva:\n ${dataAtual.getDate()}/${dataAtual.getMonth()}/${dataAtual.getFullYear()} | ${dataAtual.getHours()}:${dataAtual.getMinutes()}:${dataAtual.getSeconds()}`;
 };
 
-function exibeDataAtualComIntervalo(){
+function exibeDataAtualComIntervalo(dataFinal){
     intervalo = setInterval(() => {const dataAtual = new Date();
         if(dataAtual >= dataFinal){
-            console.log('\n---------------CHEGAMOS NA DATA FINAL---------------\n');
+            document.getElementById('Regressiva') = '\n---------------CHEGAMOS NA DATA FINAL---------------\n';
             clearInterval(intervalo);
         }
         else{
@@ -20,19 +20,17 @@ function exibeDataAtualComIntervalo(){
 }
 
 function exibeDataFinal(dataFinal){
-    console.log(`Data Final: ${dataFinal.getDate()}/${dataFinal.getMonth()}/${dataFinal.getFullYear()} | ${dataFinal.getHours()}:${dataFinal.getMinutes()}:${dataFinal.getSeconds()}`);
+    document.getElementById('DataFinal').innerText = `\nData Final: ${dataFinal.getDate()}/${dataFinal.getMonth()}/${dataFinal.getFullYear()} | ${dataFinal.getHours()}:${dataFinal.getMinutes()}:${dataFinal.getSeconds()}`;
 }
 
-function contagemRegressiva(){
+function contagemRegressiva(dataFinal){
     console.log('\n\n---------------CONTAGEM REGRESSIVA---------------\n');
     const dataAtual = new Date();
     if(dataFinal < dataAtual){
-        console.log('Já passamos desta data/horário\n');
+        document.getElementById('Regressiva').innerText = '\nJá passamos desta data/horário\n';
     }
     else{
-        if(dataAtual < dataFinal){
-            exibeDataAtualComIntervalo();
-        }
+        exibeDataAtualComIntervalo(dataFinal);
     }
 };
 
@@ -46,14 +44,14 @@ function formataTempo(ms){
     return `${String(dias).padStart(2, '0')}d ${String(horas).padStart(2, '0')}h ${String(minutos).padStart(2, '0')}m ${String(segundos).padStart(2, '0')}s`;
 }
 
-function calculaTempo(dataFinal){
+function calculaTempoRestante(dataFinal){
     const dataAtual = new Date();
     const dataAtualnum = dataAtual.valueOf();
     const dataFinalnum = dataFinal.valueOf();
     console.log(dataAtualnum, dataFinalnum);
 
     if (dataAtualnum > dataFinalnum){
-        console.log('Esta data já passou');
+        document.getElementById('Restante').innerText = '\nInsira uma data futura para a contagem regressiva';
     }
     else{
         difms = dataFinalnum - dataAtualnum;
@@ -62,9 +60,14 @@ function calculaTempo(dataFinal){
         difHoras = difMin/60;
         difDias = difHoras/24;
 
-        console.log(`Tempo restante: ${formataTempo(difms)}`);
+        document.getElementById('Restante').innerText = `\nTempo restante: ${formataTempo(difms)}`;
     }
 };
 
-const dataFinal = defineDataFinal(2024,12,27,10,5,0);
+
+const dataFinal = defineDataFinal(2024,12,27,11,40,0);
+
+
+exibeDataFinal(dataFinal);
+calculaTempoRestante(dataFinal);
 contagemRegressiva(dataFinal);
