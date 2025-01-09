@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: red;
+        }
+
+        #texto{
+            border-radius: 8px;
+            height: 30px;
+            width: 200px;
+        }
+
+        #um-botao{
+            height: 35px;
+            background-color: red;
+            color: white;
+            border-color: red;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        #numero-de-curtidas{
+            font-size: 18px;
+        }
+
+        img{
+            width: 500px;
+            display: block;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="titulo-principal">Lista de curtidas</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Aqui você verá quantas e quais pessoas curtiram</h2>
+            <img src="https://media.istockphoto.com/id/182787895/pt/foto/f%C3%AAmea-guarda-rios-alcedo-comum-atthis.jpg?s=2048x2048&w=is&k=20&c=49cHbgxl32vqxzq3s0TjzCn7ZmxL_Ri540OfzzKUVIM=">
+            <input type="text" id="texto" placeholder="Digite seu nome">
+            <button id="um-botao">Curtir</button>
+            <p id="numero-de-curtidas">Ninguém curtiu ainda</p>
+            <ul id="curtidores">
+                
+            </ul>
+        </section>
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
