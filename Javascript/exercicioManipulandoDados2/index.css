@@ -1,0 +1,105 @@
+body{
+    background-color: #F0F0F0;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    color: #4A90E2;
+}
+
+#textoInput{
+    width: 60%;
+    padding: 5px;
+    border:  solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#textoInput:focus{
+    border-color: #4A90E2;
+    outline: none;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+}
+
+#textoInput::placeholder{
+    color: #aaa;
+}
+
+#botao{
+    position:relative;
+    bottom: 1px;
+    border:none;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #4A90E2;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botao:hover{
+    background-color:#357ABD;
+}
+
+#numeroDeTarefas{
+    color: #7ED321;
+}
+
+#listaDeTarefas{
+    color: #7ED321;
+}
+
+#listaDeTarefas li{
+    font-size: 25px;
+    color: #7ED321;
+    margin-bottom: 10px;
+}
+
+#numeroDeTarefasConcluidas{
+    color: #F5A623;
+}
+
+#listaDeTarefasConcluidas{
+    color: #F5A623
+}
+
+#listaDeTarefasConcluidas li{
+    font-size: 25px;
+    color: #F5A623;
+    margin-bottom: 10px;
+
+}
+
+#caixa{
+    cursor: pointer;
+    height: 15px;
+    margin-right: 10px;
+    margin-left: 0px;
+}
+
+.deletar{
+    float: right;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-width: 1px;
+    border-color: #F0F0F0;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.deletar::before{
+    content: "\1F5D1"; 
+}
+
+
+
