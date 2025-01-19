@@ -1,0 +1,159 @@
+body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+   
+    border-bottom: none;
+    margin-bottom: 0px;
+    padding: 20px 284px;
+}
+
+#blocoDePostar{
+    display: flex;
+    align-items: center;
+    border: solid 2px lightgray;
+    
+
+    padding: 25px;
+    width: 600px;
+}
+
+#fotoPerfil{
+    height: 45px;
+    width: 45px; 
+    border-radius: 100%;
+    border:none;
+    margin-right: 10px;
+}
+
+#inputPostagem{
+    border: none;
+    font-size: 1em;
+    height: 40px;
+    color: rgb(30, 29, 29);
+}
+
+#inputPostagem:focus{
+    border: none;
+    outline: none;
+
+}
+
+#botaoPostar{
+    cursor: pointer;
+    color: white;
+    background-color:lightblue;
+    border: none;
+    width: 80px;
+    height: 50px;
+    border-radius: 30px;
+    transition: 0.2s ease-in-out;
+    position: relative;
+    left: 250px;
+}
+
+#botaoPostar:hover{
+    background-color: blue;
+}
+
+#blocoVazio{
+    width: 653px;
+    height: 5px;
+    background-color: lightgrey;
+}
+
+main{
+    width: 650px;
+    border-left: solid 2px lightgrey ;
+    border-right: solid 2px lightgrey ;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+#blocoPostagens{
+    justify-content: left;
+    margin-bottom:30px;
+    border-bottom: solid 0.5px lightgrey;
+    padding: 50px;
+    padding-top: 30px;
+    
+}
+
+#blocoPostagens p{
+    font-size: px;
+}
+
+#perfil{
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+#perfil #nomeUsuario{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: grey;
+    display: inline;
+}
+
+#perfil #nome{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+p{
+    max-width: 580px;
+    margin-bottom: 20px;
+    word-wrap: break-word;    
+}
+
+#data{
+    color: gray;
+    margin-left: 130px;
+}
+
+#fotoGato{
+    width: 555px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 30px;
+}
+
+#botaoCurtir {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#botaoCurtir:hover {
+    background-color: #e63939;
+    transform: scale(1.05);
+}
+
+#botaoCurtir:active {
+    background-color: #cc3333;
+    transform: scale(0.95)
+}
